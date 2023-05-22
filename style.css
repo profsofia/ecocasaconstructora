@@ -38,7 +38,7 @@ body {
   content: "";
   position: fixed;
   width: 100vw;
-  height: 100vh;
+  height: 10vh;
   background: rgba(234, 234, 234, 0.2);
   z-index: -1;
   transition: transform cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
@@ -53,11 +53,11 @@ body {
 }
 .nav__content {
   position: fixed;
-  top: 50%;
+  top: 10%;
   transform: translate(0%, -50%);
   width: 100%;
   text-align: center;
-  font-size: calc(2vw + 10px);
+  font-size: calc(2vw + 5px);
   font-weight: 200;
   cursor: pointer;
 }

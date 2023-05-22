@@ -21,9 +21,21 @@
   function saveContactForm(data) {
     firebase.database().ref('contact').push(data) // Hacemos referencia al método database de el SDK y hacemos referencia el nombre del objeto que contendrá nuestros registros y empujamos los nuevos envios de datos
       .then(function(){
-        alert('mensaje guardado'); // Si la petición es correcta y almaceno los datos mostramos un mensaje al usuario.
+        Swal.fire({
+          title: "Exitoso",
+          text: "Su mensaje se ha enviado correctamente",
+          icon: "succes",
+          confirmButtonText: "Ok",
+          footer:"¿Desea seguir navegando?"
+        });// Si la petición es correcta y almaceno los datos mostramos un mensaje al usuario.
       })
       .catch(function(){
-        alert('mensaje No guardado'); // En caso de ocurrir un error le mostramos al usuario que ocurrió un error.
+        Swal.fire({
+          title: "Error!",
+          text: "Hubo un error al enviar el formulario",
+          icon: "warning",
+          confirmButtonText: "Ok",
+          footer:"¿Desea volver a intentarlo?"
+        }); // En caso de ocurrir un error le mostramos al usuario que ocurrió un error.
       });
   };
